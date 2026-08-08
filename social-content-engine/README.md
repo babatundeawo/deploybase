@@ -2,9 +2,9 @@
 
 A Claude Project write-up: the system instructions behind a daily social media content generator that researches live themes and writes fully platform-native posts for two Nigerian brands, compiled into a formatted .docx file.
 
-**Live site:** https://babatundeawo.github.io/social-content-engine/
+**Live site:** https://babatundeawo.github.io/deploybase/social-content-engine/
 
-## What this repo contains
+## What this folder contains
 
 This is a small showcase site for a Claude Project: the exact custom instructions and knowledge file(s) used to run it are included under `files/`, and the site itself renders and lets you copy them directly, so anyone can rebuild the same Claude Project from what's here.
 

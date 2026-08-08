@@ -2,9 +2,9 @@
 
 A Claude Project write-up: the project-manager instructions used to keep two GitHub profiles consistently modernised, with one strict rule for how any project repo is allowed to link to any other.
 
-**Live site:** https://babatundeawo.github.io/github-portfolio-rebuild/
+**Live site:** https://babatundeawo.github.io/deploybase/github-portfolio-rebuild/
 
-## What this repo contains
+## What this folder contains
 
 This is a small showcase site for a Claude Project: the exact custom instructions and knowledge file(s) used to run it are included under `files/`, and the site itself renders and lets you copy them directly, so anyone can rebuild the same Claude Project from what's here.
 

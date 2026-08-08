@@ -2,9 +2,9 @@
 
 A Claude Project write-up: the instructions behind an AI programming tutor teaching a student developer to build a national, multi-school classroom feedback platform for Nigeria, one class at a time.
 
-**Live site:** https://babatundeawo.github.io/classpulse-national/
+**Live site:** https://babatundeawo.github.io/deploybase/classpulse-national/
 
-## What this repo contains
+## What this folder contains
 
 This is a small showcase site for a Claude Project: the exact custom instructions and knowledge file(s) used to run it are included under `files/`, and the site itself renders and lets you copy them directly, so anyone can rebuild the same Claude Project from what's here.
 

@@ -13,7 +13,7 @@ var PROJECTS = [
       "Chart.js",
       "GitHub Pages"
     ],
-    "href": "https://babatundeawo.github.io/classpulse-national/",
+    "href": "classpulse-national/",
     "external": true
   },
   {
@@ -27,7 +27,7 @@ var PROJECTS = [
       "DOCX output",
       "Multi-brand"
     ],
-    "href": "https://babatundeawo.github.io/social-content-engine/",
+    "href": "social-content-engine/",
     "external": true
   },
   {
@@ -41,7 +41,7 @@ var PROJECTS = [
       "Jekyll front matter",
       "W3Schools sourcing"
     ],
-    "href": "https://babatundeawo.github.io/github-lesson-writer/",
+    "href": "github-lesson-writer/",
     "external": true
   },
   {
@@ -55,7 +55,7 @@ var PROJECTS = [
       "README system",
       "Link architecture"
     ],
-    "href": "https://babatundeawo.github.io/github-portfolio-rebuild/",
+    "href": "github-portfolio-rebuild/",
     "external": true
   },
   {
@@ -69,7 +69,7 @@ var PROJECTS = [
       "APA references",
       "Theological research"
     ],
-    "href": "https://babatundeawo.github.io/nigerian-christian-apologist/",
+    "href": "nigerian-christian-apologist/",
     "external": true
   },
   {
@@ -82,7 +82,7 @@ var PROJECTS = [
       "Substack formatting",
       "Voice preservation"
     ],
-    "href": "https://babatundeawo.github.io/substack-post-formatter/",
+    "href": "substack-post-formatter/",
     "external": true
   },
   {
@@ -96,7 +96,7 @@ var PROJECTS = [
       "Phased teaching",
       "Ages 8+"
     ],
-    "href": "https://babatundeawo.github.io/techbase-code-coach/",
+    "href": "techbase-code-coach/",
     "external": true
   },
   {
@@ -110,7 +110,7 @@ var PROJECTS = [
       "Exam generator",
       "Marking guide"
     ],
-    "href": "https://babatundeawo.github.io/exam-revision-generator/",
+    "href": "exam-revision-generator/",
     "external": true
   },
   {
@@ -124,7 +124,7 @@ var PROJECTS = [
       "Lesson notes",
       "Auto-scheduling"
     ],
-    "href": "https://babatundeawo.github.io/lesson-note-generator/",
+    "href": "lesson-note-generator/",
     "external": true
   }
 ];

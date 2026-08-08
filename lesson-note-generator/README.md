@@ -2,9 +2,9 @@
 
 A free, live setup guide for a Claude Project that generates a complete weekly lesson note booklet, objectives, presentation steps, evaluation and assignments for every period, for any Nigerian secondary school subject and class, from e-notes or a topic list alone.
 
-**Live site:** https://babatundeawo.github.io/lesson-note-generator/
+**Live site:** https://babatundeawo.github.io/deploybase/lesson-note-generator/
 
-## What this repo contains
+## What this folder contains
 
 This is a small, self-contained site: a setup guide plus the exact custom instructions used to run the tool, included under `files/` and rendered live on the page with a copy button, so any teacher can set up their own copy in minutes.
 

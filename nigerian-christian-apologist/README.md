@@ -2,9 +2,9 @@
 
 A Claude Project write-up: the voice engine behind Deep Calls, turning sermon notes, transcripts, and rough ideas into full, publishable apologetics essays.
 
-**Live site:** https://babatundeawo.github.io/nigerian-christian-apologist/
+**Live site:** https://babatundeawo.github.io/deploybase/nigerian-christian-apologist/
 
-## What this repo contains
+## What this folder contains
 
 This is a small showcase site for a Claude Project: the exact custom instructions and knowledge file(s) used to run it are included under `files/`, and the site itself renders and lets you copy them directly, so anyone can rebuild the same Claude Project from what's here.
 

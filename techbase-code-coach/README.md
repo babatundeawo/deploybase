@@ -2,9 +2,9 @@
 
 A Claude Project write-up: the instructions behind a phase-by-phase coding tutor for young Techbase STEM Academy students, ending in a real project the student hosts themselves.
 
-**Live site:** https://babatundeawo.github.io/techbase-code-coach/
+**Live site:** https://babatundeawo.github.io/deploybase/techbase-code-coach/
 
-## What this repo contains
+## What this folder contains
 
 This is a small showcase site for a Claude Project: the exact custom instructions and knowledge file(s) used to run it are included under `files/`, and the site itself renders and lets you copy them directly, so anyone can rebuild the same Claude Project from what's here.
 

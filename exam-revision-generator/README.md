@@ -2,9 +2,9 @@
 
 A free, live setup guide for a Claude Project that turns uploaded e-notes into a properly formatted examination question paper with its own marking guide, or a self-study revision file, for any Nigerian secondary school term, subject and class.
 
-**Live site:** https://babatundeawo.github.io/exam-revision-generator/
+**Live site:** https://babatundeawo.github.io/deploybase/exam-revision-generator/
 
-## What this repo contains
+## What this folder contains
 
 This is a small, self-contained site: a setup guide plus the exact custom instructions used to run the tool, included under `files/` and rendered live on the page with a copy button, so any teacher can set up their own copy in minutes.
 
