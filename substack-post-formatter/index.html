@@ -1,0 +1,163 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Substack Post Formatter — Claude Project · Deploybase</title>
+<meta name="description" content="The Claude Project instructions behind a publishing assistant that turns a finished writeup into a complete, publish ready Substack post package.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#top">
+    <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16"/></svg></span>
+    Substack Post Formatter
+  </a>
+  <nav class="nav" data-nav>
+    <a href="#overview">Overview</a>
+    <a href="#how-it-works">How it works</a>
+    <a href="#get-project">Get this project</a>
+  </nav>
+  <button class="hamburger" data-hamburger aria-label="Open menu" aria-expanded="false"><span></span></button>
+</header>
+<div id="top"></div>
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Claude Project &middot; Publishing Assistant</span>
+    <h1>Substack Post Formatter</h1>
+    <p class="lede">Takes a finished writeup for the Babatunde Awoyemi Substack and returns a complete, publish ready package: formatted post, button placement guide, image prompts, and metadata, without touching a single word of the original.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#get-project">Get this project</a>
+      <a class="btn btn-ghost" href="#overview">See how it works</a>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="num">0</div><div class="lbl">Words removed</div></div><div class="kpi"><div class="num">4</div><div class="lbl">Part output package</div></div><div class="kpi"><div class="num">2</div><div class="lbl">Publication streams</div></div><div class="kpi"><div class="num">1</div><div class="lbl">Job: format only</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="overview">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Overview</span>
+      <h2>The writer&rsquo;s voice stays exactly as written</h2>
+      <p>The publication covers Christian faith and apologetics on one stream, and everything else, science, climate, STEM education, history, technology, and Nigerian national life, on the other. Scholarly but accessible, direct, warm, Nigerian in perspective, never smoothed out or Americanised.</p>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3.5v5c0 5-3.4 8.5-8 9.5-4.6-1-8-4.5-8-9.5v-5L12 3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+  <h3>What it never does</h3>
+  <p>Remove any word, sentence, or paragraph from the original. Reorder the content. Summarise or condense. Add its own opinions. Change the meaning of a single sentence.</p>
+</div><div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+  <h3>What it always does</h3>
+  <p>Format and structure for Substack, apply every house style rule, add the standard header and footer, and identify every button and image placement with full generation prompts.</p>
+</div><div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18M5 4h13l-3 4 3 4H5"/></svg></div>
+  <h3>House punctuation rules</h3>
+  <p>No hyphens used decoratively or as list markers. Em dashes only where a sentence genuinely requires one. Hyphen based bullet lists are converted to numbered lists or flowing prose.</p>
+</div><div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16"/></svg></div>
+  <h3>A pull quote, every time</h3>
+  <p>The single most powerful sentence in the post is identified and rendered as a Substack blockquote, placed at the most natural point, usually after the first or second section.</p>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how-it-works">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Output order</span>
+      <h2>Four parts, always in the same sequence</h2>
+    </div>
+    <div class="list">
+      <div class="list-item">
+  <div class="n">01</div>
+  <div><h4>Formatted post</h4><p>The complete writeup with the standard header and footer applied, title case bold titles, sentence case bold section headings, and byline formatted exactly to house style.</p></div>
+</div><div class="list-item">
+  <div class="n">02</div>
+  <div><h4>Button placement guide</h4><p>Every button is listed in the exact format: button type, label text, destination URL, and a placement instruction, ready to drop straight into Substack.</p></div>
+</div><div class="list-item">
+  <div class="n">03</div>
+  <div><h4>Image placement and prompts</h4><p>Every image is identified with a full generation prompt, written for wherever it is meant to sit in the finished post.</p></div>
+</div><div class="list-item">
+  <div class="n">04</div>
+  <div><h4>Post metadata block</h4><p>Everything needed to publish: date, category, and any other fields the platform requires before the post goes live.</p></div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="get-project">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Get this project</span>
+      <h2>Copy the exact files used to run this Claude Project</h2>
+      <p>The short note goes in the Claude Project&rsquo;s instructions field, and the full formatting, voice, and image prompt rules are uploaded as a knowledge file.</p>
+    </div>
+    <div class="grid" style="gap:16px;">
+      <details class="filebox-wrap">
+  <summary>
+    <div class="summary-row">
+      <div class="s-left">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H8l-4 4V4z"/></svg></div>
+        <div><h4>Custom instructions</h4><div class="s-sub">Goes in the Claude Project's instructions field</div></div>
+      </div>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </div>
+  </summary>
+  <div class="filebox-body">
+    <div class="filebox" data-src="files/custom-instructions.txt">
+      <div class="filebox-head">
+        <div class="meta">File: <strong>files/custom-instructions.txt</strong></div>
+        <div class="filebox-actions">
+          <a class="btn btn-ghost btn-sm" href="files/custom-instructions.txt" target="_blank" rel="noopener">Open raw file ↗</a>
+          <button class="btn btn-primary btn-sm" data-copy type="button">Copy text</button>
+        </div>
+      </div>
+      <pre><code></code></pre>
+    </div>
+  </div>
+</details><details class="filebox-wrap">
+  <summary>
+    <div class="summary-row">
+      <div class="s-left">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16"/></svg></div>
+        <div><h4>Full formatting rules (knowledge file)</h4><div class="s-sub">House style, button and image placement rules, and metadata requirements</div></div>
+      </div>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </div>
+  </summary>
+  <div class="filebox-body">
+    <div class="filebox" data-src="files/full-guidelines.md">
+      <div class="filebox-head">
+        <div class="meta">File: <strong>files/full-guidelines.md</strong></div>
+        <div class="filebox-actions">
+          <a class="btn btn-ghost btn-sm" href="files/full-guidelines.md" target="_blank" rel="noopener">Open raw file ↗</a>
+          <button class="btn btn-primary btn-sm" data-copy type="button">Copy text</button>
+        </div>
+      </div>
+      <pre><code></code></pre>
+    </div>
+  </div>
+</details>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://babatundeawo.github.io/" target="_blank" rel="noopener">Portfolio</a>
+      <a href="https://github.com/babatundeawo" target="_blank" rel="noopener">GitHub profile</a>
+      <a href="https://github.com/techbaseng" target="_blank" rel="noopener">Techbase</a>
+    </div>
+    <p class="fine">Built by Babatunde Awoyemi. Powered by Claude (Anthropic).</p>
+    <p class="fine">© <span data-year></span> Substack Post Formatter. A Claude Project write-up published for reference.</p>
+  </div>
+</footer>
+<script src="assets/script.js"></script>
+</body>
+</html>

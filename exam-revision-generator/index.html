@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Exam, Marking Guide &amp; Revision File Generator &middot; Deploybase</title>
+<meta name="description" content="A free setup guide for a Claude Project that turns uploaded e-notes into a formatted exam paper with marking guide, or a self-study revision file, for any Nigerian secondary school term, subject and class.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#top">
+    <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l3 3v15H6V3z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg></span>
+    Exam &amp; Revision Generator
+  </a>
+  <nav class="nav" data-nav>
+    <a href="#overview">Overview</a>
+    <a href="#how-it-works">How it works</a>
+    <a href="#get-project">Get this tool</a>
+  </nav>
+  <button class="hamburger" data-hamburger aria-label="Open menu" aria-expanded="false"><span></span></button>
+</header>
+<div id="top"></div>
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Live Tool for Teachers &middot; Free Setup Guide</span>
+    <h1>Exam, Marking Guide &amp; Revision File Generator</h1>
+    <p class="lede">Turn your uploaded e-notes into a properly formatted examination question paper with its own marking guide, or into a self-study revision file, for any term, subject and class.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#get-project">Get this tool</a>
+      <a class="btn btn-ghost" href="#overview">See how it works</a>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="num">30</div><div class="lbl">Objective questions</div></div><div class="kpi"><div class="num">30</div><div class="lbl">Section A marks</div></div><div class="kpi"><div class="num">40</div><div class="lbl">Section B marks</div></div><div class="kpi"><div class="num">70</div><div class="lbl">Total marks</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="overview">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Overview</span>
+      <h2>Upload your e-notes once. Generate exams for the whole session.</h2>
+      <p>One Claude Project, dedicated to exams and revision files, can hold e-notes for as many subjects and classes as a school needs. State the Term, Subject and Class, say whether it should be an exam or a revision file, and it does the rest.</p>
+    </div>
+    <div class="callout callout-warn"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.7 18a2 2 0 0 0 1.8 3h15a2 2 0 0 0 1.8-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg><div><p><strong>Not yet tailored to English Language or Mathematics</strong> (Mathematics especially, because of diagrams). Hold off on those two subjects until a tailored version is ready, every other subject works fully today.</p></div></div>
+    <div class="grid grid-2" style="margin-top:22px;">
+      <div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l3 3v15H6V3z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg></div>
+  
+  <h3>Exam requests</h3>
+  <p>“Generate First Term Examination for Physics SS2.” Produces a question paper, Section A: 30 objective questions, Section B: theory, plus a separate Marking Guide. 70 marks total, two .docx files.</p>
+</div><div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16"/></svg></div>
+  
+  <h3>Revision file requests</h3>
+  <p>“Generate a revision file for Second Term, Physics, SS2.” Produces one Word document: summary notes for every topic, plus practice questions with full answers underneath each one.</p>
+</div><div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18M5 4h13l-3 4 3 4H5"/></svg></div>
+  
+  <h3>Never guesses</h3>
+  <p>The Term, Subject and Class must always be stated, along with exam or revision file. If anything is missing or unclear, or more than one e-note plausibly matches, it asks you to confirm rather than guessing.</p>
+</div><div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l8 3.5v5c0 5-3.4 8.5-8 9.5-4.6-1-8-4.5-8-9.5v-5L12 3z"/><path d="M9 12l2 2 4-4"/></svg></div>
+  
+  <h3>A fresh paper every time</h3>
+  <p>Question selection, angle and phrasing vary across requests, even for the same term, subject and class, so repeat generations don't produce an identical paper.</p>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how-it-works">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Exam composition rules</span>
+      <h2>How marks are split across terms</h2>
+      <p>A First or Second Term request draws 100% of both sections from that single term's e-note. A Third Term request blends all three terms in a fixed ratio.</p>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Source</th><th>Objective (Section A)</th><th>Theory (Section B)</th></tr></thead>
+        <tbody>
+          <tr><td>1st Term e-note</td><td>5 questions</td><td>1 question</td></tr>
+          <tr><td>2nd Term e-note</td><td>5 questions</td><td>1 question</td></tr>
+          <tr><td>3rd Term e-note</td><td>20 questions</td><td>4 questions (3 regular + 1 extra)</td></tr>
+          <tr><td><strong>Total</strong></td><td><strong>30 questions</strong></td><td><strong>6 questions offered</strong></td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:16px; font-size:.92rem;">Section A: 30 questions, 1 mark each, exactly 4 options lettered A to D, answer letters randomly and evenly distributed. Section B: 1st/2nd term papers offer 5 questions and candidates answer any 4 (10 marks each); 3rd term papers offer 6 questions and candidates answer any 5 (8 marks each). Total marks always come to 70.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Formatting, every file</span>
+      <h2>Consistent, letterhead-ready documents</h2>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></div>
+  
+  <h3>Question paper</h3>
+  <p>Your school's name and address, subject, class and term, centred and bold, followed by blank Name/Date/Time lines and the candidate instructions. Times New Roman 11pt, narrow 0.5″ margins, kept within 2 pages where possible.</p>
+</div><div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+  
+  <h3>Marking guide</h3>
+  <p>A simpler centred title, the Section A answer key listed compactly, then every Section B question repeated in full above its model answer, with marks allocated per subpart. No page limit.</p>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="get-project">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Get this tool</span>
+      <h2>Set it up in three steps</h2>
+    </div>
+
+    <div class="list" style="margin-bottom:22px;">
+      <div class="list-item">
+  <div class="n">01</div>
+  <div><h4>Create a Project</h4><p>One Project dedicated to exams and revision files, named something like “Exam &amp; Revision Generator.” It can hold materials for every subject and class you need.</p></div>
+</div><div class="list-item">
+  <div class="n">02</div>
+  <div><h4>Edit two placeholders, then paste</h4><p>Before pasting the instructions below into your Project's instructions field, replace <span class="placeholder-chip">{SCHOOL_NAME}</span> with your school's full official name, and <span class="placeholder-chip">{SCHOOL_ADDRESS}</span> with its address. Both appear on every generated exam header.</p></div>
+</div><div class="list-item">
+  <div class="n">03</div>
+  <div><h4>Upload your e-notes</h4><p>Name files clearly so Claude can match them, e.g. <code>Physics_SS2_FirstTerm.docx</code>. JSS3/SS3 only need 1st and 2nd term uploaded, there is no 3rd term exam for those classes; every other class needs all three terms.</p></div>
+</div>
+    </div>
+
+    <details class="filebox-wrap">
+  <summary>
+    <div class="summary-row">
+      <div class="s-left">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H8l-4 4V4z"/></svg></div>
+        <div><h4>Custom instructions</h4><div class="s-sub">Edit the two placeholder lines, then paste into your Project's instructions field</div></div>
+      </div>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </div>
+  </summary>
+  <div class="filebox-body">
+    <div class="filebox" data-src="files/custom-instructions.md">
+      <div class="filebox-head">
+        <div class="meta">File: <strong>files/custom-instructions.md</strong></div>
+        <div class="filebox-actions">
+          <a class="btn btn-ghost btn-sm" href="files/custom-instructions.md" target="_blank" rel="noopener">Open raw file ↗</a>
+          <button class="btn btn-primary btn-sm" data-copy type="button">Copy text</button>
+        </div>
+      </div>
+      <pre><code></code></pre>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://babatundeawo.github.io/" target="_blank" rel="noopener">Portfolio</a>
+      <a href="https://github.com/babatundeawo" target="_blank" rel="noopener">GitHub profile</a>
+      <a href="https://github.com/techbaseng" target="_blank" rel="noopener">Techbase</a>
+    </div>
+    <p class="fine">Built by Babatunde Awoyemi. Powered by Claude (Anthropic).</p>
+    <p class="fine">© <span data-year></span> Exam &amp; Revision Generator. Free for Nigerian educators.</p>
+  </div>
+</footer>
+<script src="assets/script.js"></script>
+</body>
+</html>

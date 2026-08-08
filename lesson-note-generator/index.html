@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Weekly Lesson Note Generator &middot; Deploybase</title>
+<meta name="description" content="A free setup guide for a Claude Project that generates complete weekly lesson note booklets for any Nigerian secondary school subject and class, from e-notes or a topic list alone.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#top">
+    <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16"/></svg></span>
+    Weekly Lesson Note Generator
+  </a>
+  <nav class="nav" data-nav>
+    <a href="#overview">Overview</a>
+    <a href="#how-it-works">How it works</a>
+    <a href="#get-project">Get this tool</a>
+  </nav>
+  <button class="hamburger" data-hamburger aria-label="Open menu" aria-expanded="false"><span></span></button>
+</header>
+<div id="top"></div>
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Live Tool for Teachers &middot; Free Setup Guide</span>
+    <h1>Weekly Lesson Note Generator</h1>
+    <p class="lede">Generates a complete weekly lesson note booklet, objectives, presentation steps, evaluation and assignments for every period, for any subject and class, from your e-notes or from a topic list alone.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#get-project">Get this tool</a>
+      <a class="btn btn-ghost" href="#overview">See how it works</a>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="num">40</div><div class="lbl">Minutes per period</div></div><div class="kpi"><div class="num">3–4</div><div class="lbl">Periods per week</div></div><div class="kpi"><div class="num">2</div><div class="lbl">Content modes</div></div><div class="kpi"><div class="num">4+</div><div class="lbl">Presentation steps</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="overview">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Overview</span>
+      <h2>One Project, every subject and class you teach</h2>
+      <p>State the Subject, Class and Week number, the Term is optional. Claude works out which materials apply, fetches your state's official school calendar to compute the real dates for that week, including mid-term breaks, and writes the full booklet.</p>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16"/></svg></div>
+  <span class="tag">Use whichever you have</span>
+  <h3>Mode A, e-note mode</h3>
+  <p>You already have full e-notes with lesson content, definitions, examples, diagrams and exercises. Claude draws primarily from your e-note, then the optional textbook, then credible online sources.</p>
+</div><div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H8l-4 4V4z"/></svg></div>
+  <span class="tag">Use whichever you have</span>
+  <h3>Mode B, topic-list mode</h3>
+  <p>You only have a weekly topic list, subject, class, session, topics, no content. Claude builds the full lesson content from credible online educational sources and standard textbooks.</p>
+</div>
+    </div>
+    <div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 8h.01M11 12h1v5h1"/></svg><div><p>Mode detection is automatic and applies per Subject and Class. One subject can use Mode A while another uses Mode B, inside the very same Project.</p></div></div>
+  </div>
+</section>
+
+<section class="section" id="how-it-works">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">How the dates are computed</span>
+      <h2>Real dates, fetched fresh every time, never hardcoded</h2>
+    </div>
+    <div class="list">
+      <div class="list-item">
+  <div class="n">01</div>
+  <div><h4>Find the resumption date</h4><p>Claude identifies the official resumption date for the relevant term, the Monday of Week 1, from your state's Ministry of Education calendar.</p></div>
+</div><div class="list-item">
+  <div class="n">02</div>
+  <div><h4>Compute the week</h4><p>Week n Monday = Term Resumption Monday + (n minus 1) &times; 7 days. Week n Friday = Week n Monday + 4 days.</p></div>
+</div><div class="list-item">
+  <div class="n">03</div>
+  <div><h4>Adjust for breaks and holidays</h4><p>A mid-term break on the Thursday or Friday shortens that week to Monday through Wednesday. A break covering the whole week re-maps to the first teaching week after it. Public holidays are noted, and notes are still generated for the remaining teaching days.</p></div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Periods per week</span>
+      <h2>Fixed by subject, distributed evenly</h2>
+    </div>
+    <div class="table-wrap">
+      <table>
+        <thead><tr><th>Subject</th><th>Periods per week</th></tr></thead>
+        <tbody>
+          <tr><td><strong>Mathematics</strong></td><td>4 periods</td></tr>
+          <tr><td><strong>English Language</strong></td><td>4 periods</td></tr>
+          <tr><td><strong>All other subjects</strong></td><td>3 periods</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p style="margin-top:16px;">Subtopics are distributed evenly across the week's periods with no repetition. Yoruba is written entirely in pure Yoruba with full tonal marks, Arabic entirely in Arabic script.</p>
+  </div>
+</section>
+
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Inside every period</span>
+      <h2>Nine parts, every single time</h2>
+    </div>
+    <div class="grid grid-3">
+      <div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+  
+  <h3>Behavioural Objectives</h3>
+  <p>3 to 5 clear, measurable objectives.</p>
+</div><div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l9 5-9 5-9-5 9-5z"/><path d="M3 13l9 5 9-5"/></svg></div>
+  
+  <h3>Entry Behaviour</h3>
+  <p>Prior knowledge, made relatable to your students.</p>
+</div><div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h7v7H4zM13 4h7v7h-7zM4 13h7v7H4zM13 13h7v7h-7z"/></svg></div>
+  
+  <h3>Instructional Materials</h3>
+  <p>Real or improvised materials, as a genuine list.</p>
+</div><div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16"/></svg></div>
+  
+  <h3>Reference Materials</h3>
+  <p>Textbooks and page ranges, or a credible online source.</p>
+</div><div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H8l-4 4V4z"/></svg></div>
+  
+  <h3>Introduction</h3>
+  <p>Oral questions linking prior knowledge to the topic.</p>
+</div><div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18M5 4h13l-3 4 3 4H5"/></svg></div>
+  
+  <h3>Presentation</h3>
+  <p>Minimum 4 steps, each a Teacher's To-Do plus a full notebook-style Students' Note.</p>
+</div><div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></div>
+  
+  <h3>Evaluation</h3>
+  <p>3 to 5 written questions, answered and corrected in class.</p>
+</div><div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v4M12 18v4M4.9 4.9l2.8 2.8M16.3 16.3l2.8 2.8M2 12h4M18 12h4M4.9 19.1l2.8-2.8M16.3 7.7l2.8-2.8"/></svg></div>
+  
+  <h3>Conclusion</h3>
+  <p>A summary plus 2 to 3 oral revision questions.</p>
+</div><div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 3h6l3 3v15H6V3z"/><path d="M9 9h6M9 13h6M9 17h3"/></svg></div>
+  
+  <h3>Assignment</h3>
+  <p>One or more board-ready take-home tasks, listed, never blended into a paragraph.</p>
+</div>
+    </div>
+    <div class="callout"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 9v4M12 17h.01"/><path d="M10.3 3.9L2.7 18a2 2 0 0 0 1.8 3h15a2 2 0 0 0 1.8-3L13.7 3.9a2 2 0 0 0-3.4 0z"/></svg><div><p>Presentation steps read like genuine notebook pages, never a single thin sentence. Periods run one after another with no page break, only a thin rule line separates them, and content never repeats within the same week.</p></div></div>
+  </div>
+</section>
+
+<section class="section" id="get-project">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Get this tool</span>
+      <h2>Set it up in three steps</h2>
+    </div>
+
+    <div class="list" style="margin-bottom:22px;">
+      <div class="list-item">
+  <div class="n">01</div>
+  <div><h4>Create a Project</h4><p>One Project dedicated to lesson notes, named something like “Lesson Note Generator.” It can hold materials for every subject and class you need.</p></div>
+</div><div class="list-item">
+  <div class="n">02</div>
+  <div><h4>Edit three placeholders, then paste</h4><p>Before pasting the instructions below into your Project's instructions field, replace <span class="placeholder-chip">{SCHOOL_NAME}</span> with your school's full official name, <span class="placeholder-chip">{STATE}</span> with the Nigerian state whose school calendar should be fetched, and <span class="placeholder-chip">{LOCATION_CONTEXT}</span> with a short description of your students' everyday environment.</p></div>
+</div><div class="list-item">
+  <div class="n">03</div>
+  <div><h4>Upload your materials</h4><p>Either three e-notes (1st, 2nd, 3rd term) or three weekly topic lists, per subject and class, whichever mode fits what you already have.</p></div>
+</div>
+    </div>
+
+    <details class="filebox-wrap">
+  <summary>
+    <div class="summary-row">
+      <div class="s-left">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H8l-4 4V4z"/></svg></div>
+        <div><h4>Custom instructions</h4><div class="s-sub">Edit the three placeholder lines, then paste into your Project's instructions field</div></div>
+      </div>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </div>
+  </summary>
+  <div class="filebox-body">
+    <div class="filebox" data-src="files/custom-instructions.md">
+      <div class="filebox-head">
+        <div class="meta">File: <strong>files/custom-instructions.md</strong></div>
+        <div class="filebox-actions">
+          <a class="btn btn-ghost btn-sm" href="files/custom-instructions.md" target="_blank" rel="noopener">Open raw file ↗</a>
+          <button class="btn btn-primary btn-sm" data-copy type="button">Copy text</button>
+        </div>
+      </div>
+      <pre><code></code></pre>
+    </div>
+  </div>
+</details>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://babatundeawo.github.io/" target="_blank" rel="noopener">Portfolio</a>
+      <a href="https://github.com/babatundeawo" target="_blank" rel="noopener">GitHub profile</a>
+      <a href="https://github.com/techbaseng" target="_blank" rel="noopener">Techbase</a>
+    </div>
+    <p class="fine">Built by Babatunde Awoyemi. Powered by Claude (Anthropic).</p>
+    <p class="fine">© <span data-year></span> Weekly Lesson Note Generator. Free for Nigerian educators.</p>
+  </div>
+</footer>
+<script src="assets/script.js"></script>
+</body>
+</html>

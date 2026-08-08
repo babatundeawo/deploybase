@@ -1,0 +1,160 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GitHub Lesson Writer — Claude Project · Deploybase</title>
+<meta name="description" content="The Claude Project instructions behind a curriculum writer that turns source links into complete, beginner safe HTML lessons for Nigerian learners.">
+<link rel="stylesheet" href="assets/style.css">
+</head>
+<body>
+
+<header class="topbar">
+  <a class="brand" href="#top">
+    <span class="brand-mark"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16"/></svg></span>
+    GitHub Lesson Writer
+  </a>
+  <nav class="nav" data-nav>
+    <a href="#overview">Overview</a>
+    <a href="#how-it-works">How it works</a>
+    <a href="#get-project">Get this project</a>
+  </nav>
+  <button class="hamburger" data-hamburger aria-label="Open menu" aria-expanded="false"><span></span></button>
+</header>
+<div id="top"></div>
+<section class="hero">
+  <div class="container">
+    <span class="eyebrow">Claude Project &middot; Curriculum Writer</span>
+    <h1>GitHub Lesson Writer</h1>
+    <p class="lede">Turns a set of source links into one complete, beginner safe HTML lesson file, grounded in Nigerian classrooms and following the exact same thirteen part structure every single time.</p>
+    <div class="hero-actions">
+      <a class="btn btn-primary" href="#get-project">Get this project</a>
+      <a class="btn btn-ghost" href="#overview">See how it works</a>
+    </div>
+    <div class="kpi-row">
+      <div class="kpi"><div class="num">13</div><div class="lbl">Sections per lesson</div></div><div class="kpi"><div class="num">3</div><div class="lbl">Guided exercises</div></div><div class="kpi"><div class="num">0</div><div class="lbl">Assumed knowledge</div></div><div class="kpi"><div class="num">1</div><div class="lbl">Mini project</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="overview">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Overview</span>
+      <h2>Every lesson starts as raw source links, and ends as one polished file</h2>
+      <p>Given a lesson number and one or more source URLs, it fetches every link in order, merges overlapping explanations instead of repeating them, and writes a single smooth, progressive lesson rather than disconnected sections.</p>
+    </div>
+    <div class="grid grid-2">
+      <div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16"/></svg></div>
+  <h3>Fixed file format</h3>
+  <p>Every lesson begins with YAML front matter, then moves through introduction, prerequisite recap, concept sections, code examples, guided practice, a mini project, common mistakes, reflection, and a quick reference card.</p>
+</div><div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 3v18M5 4h13l-3 4 3 4H5"/></svg></div>
+  <h3>Nigerian context by default</h3>
+  <p>Names like Emeka, Ngozi, and Fatima. Cities like Lagos, Abuja, and Kano. Scenarios like Lagos traffic, school results, and market inventory. Never generic filler examples.</p>
+</div><div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M9 8l-4 4 4 4M15 8l4 4-4 4"/></svg></div>
+  <h3>Code examples that grow</h3>
+  <p>Every concept opens with one isolated, three to six line example, then grows from very simple to moderate to practical to realistic, each one followed by an expected output block.</p>
+</div><div class="card">
+  <div class="icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6L9 17l-5-5"/></svg></div>
+  <h3>A checklist before saving</h3>
+  <p>Fourteen items are verified before any file is saved, from front matter presence to whether difficulty increases gradually across the whole lesson.</p>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="how-it-works">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Teaching each concept</span>
+      <h2>Three phases, every single time</h2>
+    </div>
+    <div class="list">
+      <div class="list-item">
+  <div class="n">01</div>
+  <div><h4>Build understanding first</h4><p>Define every technical term in plain language, use an analogy or story, show the simplest possible example, then immediately show a common beginner mistake and its fix.</p></div>
+</div><div class="list-item">
+  <div class="n">02</div>
+  <div><h4>Guided practice</h4><p>Each exercise runs Objective, Scenario, Steps, Hints, Expected Output, then Self Check Questions, opened by a short warm up example and closed with an optional what if variation.</p></div>
+</div><div class="list-item">
+  <div class="n">03</div>
+  <div><h4>Mini project</h4><p>Setup, Core Logic, Enhancements, Final Output, with a milestone shown after every stage, closing with reflection questions and optional extensions.</p></div>
+</div>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="get-project">
+  <div class="container">
+    <div class="section-head">
+      <span class="tag">Get this project</span>
+      <h2>Copy the exact files used to run this Claude Project</h2>
+      <p>Paste the short instructions into a new Claude Project&rsquo;s instructions field, then upload the full writing rules as a knowledge file named LESSON_WRITING_INSTRUCTIONS.md.</p>
+    </div>
+    <div class="grid" style="gap:16px;">
+      <details class="filebox-wrap">
+  <summary>
+    <div class="summary-row">
+      <div class="s-left">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H8l-4 4V4z"/></svg></div>
+        <div><h4>Custom instructions</h4><div class="s-sub">Goes in the Claude Project's instructions field</div></div>
+      </div>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </div>
+  </summary>
+  <div class="filebox-body">
+    <div class="filebox" data-src="files/custom-instructions.md">
+      <div class="filebox-head">
+        <div class="meta">File: <strong>files/custom-instructions.md</strong></div>
+        <div class="filebox-actions">
+          <a class="btn btn-ghost btn-sm" href="files/custom-instructions.md" target="_blank" rel="noopener">Open raw file ↗</a>
+          <button class="btn btn-primary btn-sm" data-copy type="button">Copy text</button>
+        </div>
+      </div>
+      <pre><code></code></pre>
+    </div>
+  </div>
+</details><details class="filebox-wrap">
+  <summary>
+    <div class="summary-row">
+      <div class="s-left">
+        <div class="s-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16"/></svg></div>
+        <div><h4>Full writing instructions (knowledge file)</h4><div class="s-sub">Upload as a project knowledge file</div></div>
+      </div>
+      <svg class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
+    </div>
+  </summary>
+  <div class="filebox-body">
+    <div class="filebox" data-src="files/full-guidelines.md">
+      <div class="filebox-head">
+        <div class="meta">File: <strong>files/full-guidelines.md</strong></div>
+        <div class="filebox-actions">
+          <a class="btn btn-ghost btn-sm" href="files/full-guidelines.md" target="_blank" rel="noopener">Open raw file ↗</a>
+          <button class="btn btn-primary btn-sm" data-copy type="button">Copy text</button>
+        </div>
+      </div>
+      <pre><code></code></pre>
+    </div>
+  </div>
+</details>
+    </div>
+  </div>
+</section>
+
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-links">
+      <a href="https://babatundeawo.github.io/" target="_blank" rel="noopener">Portfolio</a>
+      <a href="https://github.com/babatundeawo" target="_blank" rel="noopener">GitHub profile</a>
+      <a href="https://github.com/techbaseng" target="_blank" rel="noopener">Techbase</a>
+    </div>
+    <p class="fine">Built by Babatunde Awoyemi. Powered by Claude (Anthropic).</p>
+    <p class="fine">© <span data-year></span> GitHub Lesson Writer. A Claude Project write-up published for reference.</p>
+  </div>
+</footer>
+<script src="assets/script.js"></script>
+</body>
+</html>
