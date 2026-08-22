@@ -153,3 +153,9 @@ details[open] .chev { transform: rotate(90deg); }
 
 .hero { background: radial-gradient(circle at 88% 0%, color-mix(in srgb, var(--accent) 16%, transparent), transparent 55%); }
 
+
+@media (max-width: 400px) {
+  .container { padding: 0 16px; }
+  .topbar { padding: 14px 16px; }
+  .hero { padding: 40px 0 32px; }
+}

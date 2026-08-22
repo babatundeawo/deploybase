@@ -42,3 +42,22 @@ function renderGrid() {
 }
 
 document.addEventListener("DOMContentLoaded", renderGrid);
+
+// Mobile nav toggle (hamburger), same pattern used on the project detail pages.
+document.addEventListener("DOMContentLoaded", function () {
+  const hamburger = document.querySelector("[data-hamburger]");
+  const nav = document.querySelector("[data-nav]");
+  if (!hamburger || !nav) return;
+  hamburger.addEventListener("click", function () {
+    const open = nav.classList.toggle("is-open");
+    hamburger.classList.toggle("is-open", open);
+    hamburger.setAttribute("aria-expanded", open ? "true" : "false");
+  });
+  nav.querySelectorAll("a").forEach(function (a) {
+    a.addEventListener("click", function () {
+      nav.classList.remove("is-open");
+      hamburger.classList.remove("is-open");
+      hamburger.setAttribute("aria-expanded", "false");
+    });
+  });
+});

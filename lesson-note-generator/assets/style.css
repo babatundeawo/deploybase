@@ -165,3 +165,9 @@ details[open] .chev { transform: rotate(90deg); }
 }
 :root { --warn: #8A4B2E; }
 
+
+@media (max-width: 400px) {
+  .container { padding: 0 16px; }
+  .topbar { padding: 14px 16px; }
+  .hero { padding: 40px 0 32px; }
+}
