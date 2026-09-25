@@ -13,7 +13,7 @@ var PROJECTS = [
       "Chart.js",
       "GitHub Pages"
     ],
-    "href": "classpulse-national/",
+    "href": "classpulse-national/index.html",
     "external": true
   },
   {
@@ -27,7 +27,7 @@ var PROJECTS = [
       "DOCX output",
       "Multi-brand"
     ],
-    "href": "social-content-engine/",
+    "href": "social-content-engine/index.html",
     "external": true
   },
   {
@@ -41,7 +41,7 @@ var PROJECTS = [
       "Jekyll front matter",
       "W3Schools sourcing"
     ],
-    "href": "github-lesson-writer/",
+    "href": "github-lesson-writer/index.html",
     "external": true
   },
   {
@@ -55,7 +55,7 @@ var PROJECTS = [
       "README system",
       "Link architecture"
     ],
-    "href": "github-portfolio-rebuild/",
+    "href": "github-portfolio-rebuild/index.html",
     "external": true
   },
   {
@@ -69,7 +69,7 @@ var PROJECTS = [
       "APA references",
       "Theological research"
     ],
-    "href": "nigerian-christian-apologist/",
+    "href": "nigerian-christian-apologist/index.html",
     "external": true
   },
   {
@@ -82,7 +82,7 @@ var PROJECTS = [
       "Substack formatting",
       "Voice preservation"
     ],
-    "href": "substack-post-formatter/",
+    "href": "substack-post-formatter/index.html",
     "external": true
   },
   {
@@ -96,35 +96,22 @@ var PROJECTS = [
       "Phased teaching",
       "Ages 8+"
     ],
-    "href": "techbase-code-coach/",
+    "href": "techbase-code-coach/index.html",
     "external": true
   },
   {
     "id": "TOOL.01",
     "status": "tool",
-    "name": "Exam & Revision Generator",
-    "role": "Live tool — free for teachers",
-    "summary": "Turns uploaded e-notes into a formatted exam question paper with its own marking guide, or a self-study revision file, for any term, subject and class.",
+    "name": "Educator AI Toolkit — Lesson Notes & Exams",
+    "role": "Live tool — free for teachers, one unified Project",
+    "summary": "One Claude Project now does both jobs: say a Week number for a full lesson note booklet, or a Term alone for a 70-mark exam with marking guide, or a self-study revision file. Ships with a per-subject Scheme of Work picker and a guided setup wizard.",
     "stack": [
       "Live site",
-      "Exam generator",
-      "Marking guide"
+      "Unified Project",
+      "Scheme picker",
+      "Setup wizard"
     ],
-    "href": "exam-revision-generator/",
-    "external": true
-  },
-  {
-    "id": "TOOL.02",
-    "status": "tool",
-    "name": "Weekly Lesson Note Generator",
-    "role": "Live tool — free for teachers",
-    "summary": "Generates a complete weekly lesson note booklet for every period, for any subject and class, from e-notes or a topic list alone.",
-    "stack": [
-      "Live site",
-      "Lesson notes",
-      "Auto-scheduling"
-    ],
-    "href": "lesson-note-generator/",
+    "href": "https://babatundeawo.github.io/educator-ai-toolkit/",
     "external": true
   }
 ];

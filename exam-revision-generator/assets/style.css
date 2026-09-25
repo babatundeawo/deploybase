@@ -167,3 +167,164 @@ details[open] .chev { transform: rotate(90deg); }
   .topbar { padding: 14px 16px; }
   .hero { padding: 40px 0 32px; }
 }
+
+/* =========================================================
+   Premium layer — senior-team pass
+   Additive only. Reuses this theme's own tokens (--bg, --surface,
+   --ink, --primary, --accent, --radius, --shadow, --font-*) so it
+   re-skins automatically per project with zero extra maintenance.
+========================================================= */
+
+/* ---- Smoother global motion ---- */
+a, .btn, .card, .kpi, .list-item, .filebox, .chip, .pill, table tr, .hamburger span {
+  transition: transform .28s cubic-bezier(.22,1,.36,1), box-shadow .28s cubic-bezier(.22,1,.36,1),
+              background-color .2s ease, border-color .2s ease, color .2s ease, opacity .3s ease;
+}
+
+/* ---- Scroll progress bar ---- */
+.scroll-progress {
+  position: fixed; top: 0; left: 0; height: 3px; width: 0%; z-index: 100;
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  box-shadow: 0 0 12px color-mix(in srgb, var(--accent) 60%, transparent);
+}
+
+/* ---- Header elevation on scroll ---- */
+.topbar { transition: box-shadow .25s ease, background-color .25s ease, border-color .25s ease; }
+.topbar.is-scrolled { box-shadow: 0 10px 30px -18px rgba(0,0,0,.35); border-bottom-color: color-mix(in srgb, var(--primary) 18%, var(--line)); }
+
+/* ---- Back-to-top ---- */
+.back-to-top {
+  position: fixed; right: 20px; bottom: 20px; z-index: 90;
+  width: 44px; height: 44px; border-radius: 50%;
+  background: var(--primary); color: var(--primary-ink, #fff); border: none; cursor: pointer;
+  display: flex; align-items: center; justify-content: center;
+  box-shadow: 0 12px 28px -10px color-mix(in srgb, var(--primary) 60%, transparent);
+  opacity: 0; transform: translateY(12px) scale(.9); pointer-events: none;
+}
+.back-to-top svg { width: 18px; height: 18px; }
+.back-to-top.is-visible { opacity: 1; transform: translateY(0) scale(1); pointer-events: auto; }
+.back-to-top:hover { filter: brightness(1.1); transform: translateY(-3px) scale(1.04); }
+
+/* ---- Buttons: shine sweep + press ---- */
+.btn { position: relative; overflow: hidden; isolation: isolate; }
+.btn::after {
+  content: ""; position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(115deg, transparent 30%, color-mix(in srgb, white 35%, transparent) 48%, transparent 65%);
+  transform: translateX(-120%); transition: transform .55s ease;
+}
+.btn:hover::after { transform: translateX(120%); }
+.btn:active { transform: translateY(1px) scale(.98); }
+.btn-primary { box-shadow: 0 10px 24px -12px color-mix(in srgb, var(--primary) 65%, transparent); }
+.btn-primary:hover { box-shadow: 0 14px 30px -12px color-mix(in srgb, var(--primary) 70%, transparent); transform: translateY(-1px); }
+.btn-ghost:hover { transform: translateY(-1px); }
+
+/* ---- Cards: depth + cursor spotlight ---- */
+.card, .kpi, .filebox, .callout {
+  position: relative; overflow: hidden;
+}
+.card::before, .kpi::before {
+  content: ""; position: absolute; inset: 0; z-index: 0; opacity: 0; pointer-events: none;
+  background: radial-gradient(220px circle at var(--mx,50%) var(--my,50%), color-mix(in srgb, var(--accent) 16%, transparent), transparent 70%);
+  transition: opacity .35s ease;
+}
+.card:hover::before, .kpi:hover::before { opacity: 1; }
+.card > *, .kpi > * { position: relative; z-index: 1; }
+.card:hover, .list-item:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 40px -22px rgba(0,0,0,.28), 0 2px 8px -2px rgba(0,0,0,.06);
+  border-color: color-mix(in srgb, var(--primary) 22%, var(--line));
+}
+.kpi:hover { transform: translateY(-3px); box-shadow: 0 16px 32px -20px rgba(0,0,0,.3); border-color: color-mix(in srgb, var(--accent) 30%, var(--line)); }
+
+/* ---- List items: accent rail on hover ---- */
+.list-item { border-left: 3px solid transparent; }
+.list-item:hover { border-left-color: var(--accent); }
+
+/* ---- Tables: row highlight ---- */
+tbody tr:hover td { background: color-mix(in srgb, var(--primary) 5%, var(--surface)); }
+
+/* ---- Filebox polish ---- */
+.filebox pre { position: relative; }
+.filebox:hover { box-shadow: 0 14px 30px -20px rgba(0,0,0,.3); }
+.btn.is-copied { box-shadow: 0 10px 22px -10px color-mix(in srgb, var(--accent) 60%, transparent); }
+
+/* ---- Eyebrow: live pulse ring ---- */
+.eyebrow { position: relative; padding-left: 30px !important; }
+.eyebrow::before {
+  content: ""; position: absolute; left: 13px; top: 50%; width: 7px; height: 7px; border-radius: 50%;
+  background: var(--accent); transform: translateY(-50%);
+  box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 60%, transparent);
+  animation: pulse-ring 2.2s ease-out infinite;
+}
+
+@keyframes pulse-ring {
+  0%   { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 55%, transparent); }
+  70%  { box-shadow: 0 0 0 9px color-mix(in srgb, var(--accent) 0%, transparent); }
+  100% { box-shadow: 0 0 0 0 color-mix(in srgb, var(--accent) 0%, transparent); }
+}
+
+/* ---- Hero: soft drifting gradient orbs ---- */
+.hero { isolation: isolate; }
+.hero::after {
+  content: ""; position: absolute; z-index: -1; inset: -10% -10% auto auto; width: 480px; height: 480px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 22%, transparent), transparent 68%);
+  filter: blur(8px); animation: drift 16s ease-in-out infinite alternate;
+}
+@keyframes drift {
+  from { transform: translate(0,0) scale(1); }
+  to   { transform: translate(-30px, 24px) scale(1.08); }
+}
+
+/* ---- Scroll-reveal ---- */
+.reveal { opacity: 0; transform: translateY(16px); transition: opacity .6s cubic-bezier(.22,1,.36,1), transform .6s cubic-bezier(.22,1,.36,1); }
+.reveal.is-visible { opacity: 1; transform: translateY(0); }
+
+/* ---- Hamburger → X morph (driven by aria-expanded, no JS class needed) ---- */
+.hamburger[aria-expanded="true"] span { background: transparent; }
+.hamburger[aria-expanded="true"]::before { transform: translateY(5px) rotate(45deg); }
+.hamburger[aria-expanded="true"]::after { transform: translateY(-5px) rotate(-45deg); }
+
+/* ---- Focus states ---- */
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 4px; }
+
+/* ---- Reduced motion ---- */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: .001ms !important; animation-iteration-count: 1 !important; transition-duration: .001ms !important; }
+  .reveal { opacity: 1; transform: none; }
+}
+
+/* ---- Auto dark mode (follows system) ---- */
+@media (prefers-color-scheme: dark) {
+  :root {
+    --bg: #0B0C10;
+    --surface: #14161C;
+    --surface-2: #1B1E26;
+    --ink: #EDEFF5;
+    --ink-soft: #A9AFBD;
+    --line: #262A35;
+    --shadow: 0 1px 2px rgba(0,0,0,.4), 0 8px 24px -12px rgba(0,0,0,.6);
+  }
+  .topbar { background: color-mix(in srgb, var(--bg) 80%, transparent); }
+  code, .chip { background: var(--surface-2); }
+  .card, .kpi, .list-item, .filebox, table, .summary-row { background: var(--surface); }
+  th { background: var(--surface-2); }
+  .filebox pre { background: var(--surface-2); }
+}
+
+@media (max-width: 480px) {
+  .back-to-top { right: 14px; bottom: 14px; width: 40px; height: 40px; }
+}
+
+/* ---- CTA band (reusable closing banner) ---- */
+.cta-band{
+  border-radius: var(--radius); background: var(--ink); color: #fff; padding: 30px 28px;
+  display: flex; align-items: center; justify-content: space-between; gap: 22px; flex-wrap: wrap;
+  position: relative; overflow: hidden;
+}
+.cta-band::before{
+  content:""; position:absolute; inset:-40% -10% auto auto; width:280px; height:280px;
+  background: radial-gradient(circle, color-mix(in srgb, var(--accent) 30%, transparent), transparent 70%);
+}
+.cta-band h3{ color:#fff; font-size:1.15rem; margin-bottom:4px; position:relative; }
+.cta-band p{ color:#B7BEC9; margin:0; font-size:.86rem; position:relative; }
+.cta-band .btn-primary{ position:relative; }

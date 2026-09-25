@@ -1,27 +1,31 @@
-# Weekly Lesson Note Generator
+# Lesson Notes & Exam Generator — consolidated
 
-A free, live setup guide for a Claude Project that generates a complete weekly lesson note booklet, objectives, presentation steps, evaluation and assignments for every period, for any Nigerian secondary school subject and class, from e-notes or a topic list alone.
+**This folder now points to the live tool instead of hosting its own copy of the setup flow.**
 
-**Live site:** https://babatundeawo.github.io/deploybase/lesson-note-generator/
+The Weekly Lesson Note Generator and the Exam & Revision Generator used to be
+two separate Claude Projects, each with its own custom instructions and its
+own setup guide under this repo. They have since been rewritten and merged
+into **one unified Claude Project**, covered by its own dedicated site:
+
+**Live tool:** https://babatundeawo.github.io/educator-ai-toolkit/
+
+## Why the change
+
+Maintaining the full setup wizard, the Master Instructions editor, and a
+117-file Scheme of Work picker as a second copy inside Deploybase meant two
+places to keep in sync every time the underlying Project changed. The
+Educator AI Toolkit is now the single source of truth for both jobs; this
+page is a short explainer plus a link out, not a duplicate.
 
 ## What this folder contains
 
-This is a small, self-contained site: a setup guide plus the exact custom instructions used to run the tool, included under `files/` and rendered live on the page with a copy button, so any teacher can set up their own copy in minutes.
+- `index.html` — explains the consolidation and links to the live tool
+- `assets/` — the shared Deploybase stylesheet and script (premium layer
+  included), kept in sync with the rest of the registry
+- `files/custom-instructions.md` — the original, now-retired instruction
+  text, kept for history; see the note at the top of that file
 
-- `index.html` — the site
-- `assets/` — stylesheet and script
-- `files/custom-instructions.md` — the original instruction text (edit the `{SCHOOL_NAME}`, `{STATE}` and `{LOCATION_CONTEXT}` placeholders before pasting into a Project)
-
-## Tech stack
-
-Static HTML, CSS, vanilla JavaScript. No build step, no framework.
-
-## Setting it up yourself
-
-1. Create a new Claude Project at [claude.ai](https://claude.ai), named something like "Lesson Note Generator."
-2. Copy `files/custom-instructions.md`, replace `{SCHOOL_NAME}`, `{STATE}` and `{LOCATION_CONTEXT}` with your details, and paste it into the Project's **instructions** field.
-3. Upload either three e-notes or three weekly topic lists (1st, 2nd, 3rd term) per subject and class.
-4. Ask for a week's lesson notes in the chat, stating Subject, Class and Week number.
+The old `exam-revision-generator/` folder in this repo now redirects here.
 
 ---
 

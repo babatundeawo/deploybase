@@ -1,3 +1,15 @@
+<!--
+DEPRECATED — retained for history only.
+
+This instruction set has been superseded by the unified Master Project
+Instructions used by the Educator AI Toolkit, which now handles both lesson
+notes and exams/revision files in one Claude Project, with an interactive
+setup editor and a per-subject Scheme of Work picker.
+
+Get the current instructions here instead:
+https://babatundeawo.github.io/educator-ai-toolkit/setup.html
+-->
+
 # UNIFIED LESSON NOTE GENERATOR — ALL TERMS, ALL SUBJECTS, ALL CLASSES
 
 ---

@@ -41,7 +41,11 @@ function renderGrid() {
   }
 }
 
-document.addEventListener("DOMContentLoaded", renderGrid);
+document.addEventListener("DOMContentLoaded", function () {
+  renderGrid();
+  revealCards();
+  attachSpotlight();
+});
 
 // Mobile nav toggle (hamburger), same pattern used on the project detail pages.
 document.addEventListener("DOMContentLoaded", function () {
@@ -61,3 +65,94 @@ document.addEventListener("DOMContentLoaded", function () {
     });
   });
 });
+
+/* =========================================================
+   Premium layer — scroll progress, back-to-top, header
+   elevation, card spotlight, scroll-reveal
+========================================================= */
+const reduceMotion = window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+document.addEventListener("DOMContentLoaded", function () {
+  const progress = document.createElement("div");
+  progress.className = "scroll-progress";
+  document.body.appendChild(progress);
+
+  const backToTop = document.createElement("button");
+  backToTop.className = "back-to-top";
+  backToTop.type = "button";
+  backToTop.setAttribute("aria-label", "Back to top");
+  backToTop.innerHTML = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M12 19V5M5 12l7-7 7 7"/></svg>';
+  backToTop.addEventListener("click", function () {
+    window.scrollTo({ top: 0, behavior: reduceMotion ? "auto" : "smooth" });
+  });
+  document.body.appendChild(backToTop);
+
+  const header = document.querySelector(".site-header");
+  let ticking = false;
+  function onScroll() {
+    if (ticking) return;
+    ticking = true;
+    requestAnimationFrame(function () {
+      const y = window.scrollY || window.pageYOffset;
+      if (header) header.classList.toggle("is-scrolled", y > 8);
+      backToTop.classList.toggle("is-visible", y > 480);
+      const h = document.documentElement;
+      const scrolled = h.scrollTop || document.body.scrollTop;
+      const height = (h.scrollHeight || document.body.scrollHeight) - h.clientHeight;
+      progress.style.width = (height > 0 ? (scrolled / height) * 100 : 0) + "%";
+      ticking = false;
+    });
+  }
+  window.addEventListener("scroll", onScroll, { passive: true });
+  onScroll();
+});
+
+function attachSpotlight() {
+  if (reduceMotion) return;
+  document.querySelectorAll(".card, .note-card").forEach(function (el) {
+    el.addEventListener("mousemove", function (e) {
+      const r = el.getBoundingClientRect();
+      el.style.setProperty("--mx", (e.clientX - r.left) + "px");
+      el.style.setProperty("--my", (e.clientY - r.top) + "px");
+    });
+  });
+}
+
+function revealCards() {
+  // Cards render async once PROJECTS loads, so watch the grid for children
+  // and reveal them with a staggered fade once they exist and scroll into view.
+  const grid = document.getElementById("deploy-grid");
+  const targets = document.querySelectorAll(".note-card");
+  targets.forEach(function (el) { el.classList.add("reveal"); });
+
+  if (reduceMotion || !("IntersectionObserver" in window)) {
+    document.querySelectorAll(".reveal").forEach(function (el) { el.classList.add("is-visible"); });
+    if (grid) {
+      new MutationObserver(function () {
+        grid.querySelectorAll(".card").forEach(function (el) { el.classList.add("is-visible"); });
+      }).observe(grid, { childList: true });
+    }
+    return;
+  }
+
+  const io = new IntersectionObserver(function (entries) {
+    entries.forEach(function (entry) {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("is-visible");
+        io.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.12, rootMargin: "0px 0px -40px 0px" });
+
+  document.querySelectorAll(".reveal").forEach(function (el) { io.observe(el); });
+
+  if (grid) {
+    new MutationObserver(function () {
+      grid.querySelectorAll(".card").forEach(function (el, i) {
+        el.classList.add("reveal");
+        el.style.transitionDelay = Math.min(i * 55, 400) + "ms";
+        io.observe(el);
+      });
+    }).observe(grid, { childList: true });
+  }
+}
