@@ -1,0 +1,82 @@
+# Builds the site, checks it, and publishes it to GitHub Pages.
+# Runs on every change to the main branch, on every pull request (build and checks
+# only, nothing is published), and on demand from the Actions tab.
+name: Deploy site
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+  workflow_dispatch:
+
+# Least privilege: the build only needs to read the repository.
+permissions:
+  contents: read
+
+# Never run two deployments at the same time.
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  build:
+    name: Build and check
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get the files
+        uses: actions/checkout@v4
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      # Fills in the registry cards, writes sitemap.xml and checks every link.
+      # It stops with a plain message if a link or file is missing.
+      - name: Build and check links
+        run: node scripts/build.mjs
+
+      - name: Set up Pages
+        if: github.event_name != 'pull_request'
+        uses: actions/configure-pages@v5
+
+      - name: Package the site
+        if: github.event_name != 'pull_request'
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: dist
+
+  lighthouse:
+    name: Lighthouse report
+    runs-on: ubuntu-latest
+    needs: build
+    # A report, not a gate: a low score never blocks a deployment.
+    continue-on-error: true
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/build.mjs
+      - name: Run Lighthouse
+        uses: treosh/lighthouse-ci-action@v12
+        with:
+          configPath: ./lighthouserc.json
+          uploadArtifacts: true
+
+  deploy:
+    name: Publish
+    runs-on: ubuntu-latest
+    needs: build
+    if: github.event_name != 'pull_request'
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - name: Publish to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,165 @@
+/* Per-project colour and font tokens.
+   Each block is applied with <html data-theme="slug"> on a project page,
+   and with data-theme on a registry card in the hub (colours only). */
+
+[data-theme="classpulse-national"] {
+  --bg: #F7FAF7;
+  --surface: #FFFFFF;
+  --surface-2: #EFF5EE;
+  --ink: #152238;
+  --ink-soft: #4B5A6E;
+  --line: #DFE7E1;
+  --primary: #1B2A4A;
+  --primary-ink: #FFFFFF;
+  --accent: #2E9E5B;
+  --accent-2: #F2B33D;
+  --radius: 16px;
+}
+html[data-theme="classpulse-national"] {
+  --font-head: 'Nunito', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+[data-theme="social-content-engine"] {
+  --bg: #FBF8FC;
+  --surface: #FFFFFF;
+  --surface-2: #F3ECF7;
+  --ink: #241934;
+  --ink-soft: #5B4E6D;
+  --line: #E7DCEE;
+  --primary: #6A2E9E;
+  --primary-ink: #FFFFFF;
+  --accent: #E8567C;
+  --accent-2: #F2A33D;
+  --radius: 18px;
+}
+html[data-theme="social-content-engine"] {
+  --font-head: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Plus Jakarta Sans', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+[data-theme="github-lesson-writer"] {
+  --bg: #F5FAF9;
+  --surface: #FFFFFF;
+  --surface-2: #E7F3EF;
+  --ink: #0F2B26;
+  --ink-soft: #3F6459;
+  --line: #D8EAE4;
+  --primary: #0F6B5C;
+  --primary-ink: #FFFFFF;
+  --accent: #E0A736;
+  --accent-2: #2E8DBE;
+  --radius: 14px;
+}
+html[data-theme="github-lesson-writer"] {
+  --font-head: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Space Grotesk', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+[data-theme="github-portfolio-rebuild"] {
+  --bg: #FAFAFC;
+  --surface: #FFFFFF;
+  --surface-2: #EEEFF4;
+  --ink: #14151A;
+  --ink-soft: #53566A;
+  --line: #E2E3EC;
+  --primary: #14151A;
+  --primary-ink: #FFFFFF;
+  --accent: #3D8BFF;
+  --accent-2: #8C5CF2;
+  --radius: 12px;
+}
+html[data-theme="github-portfolio-rebuild"] {
+  --font-head: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Manrope', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+[data-theme="nigerian-christian-apologist"] {
+  --bg: #FBF8EF;
+  --surface: #FFFFFF;
+  --surface-2: #F1EAD3;
+  --ink: #1B2440;
+  --ink-soft: #4E5673;
+  --line: #E7DEBE;
+  --primary: #1B3A6B;
+  --primary-ink: #FFFFFF;
+  --accent: #C9A24B;
+  --accent-2: #8A2E2E;
+  --radius: 10px;
+}
+html[data-theme="nigerian-christian-apologist"] {
+  --font-head: 'Fraunces', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+[data-theme="substack-post-formatter"] {
+  --bg: #FBF5EC;
+  --surface: #FFFFFF;
+  --surface-2: #F1E4D3;
+  --ink: #2B2420;
+  --ink-soft: #5B4F45;
+  --line: #E9D9C4;
+  --primary: #2B2420;
+  --primary-ink: #FBF5EC;
+  --accent: #C1622D;
+  --accent-2: #3F6B5C;
+  --radius: 8px;
+}
+html[data-theme="substack-post-formatter"] {
+  --font-head: 'Source Serif 4', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+[data-theme="techbase-code-coach"] {
+  --bg: #F5F7FF;
+  --surface: #FFFFFF;
+  --surface-2: #EAEEFC;
+  --ink: #1E2247;
+  --ink-soft: #4B5079;
+  --line: #DCE1F5;
+  --primary: #2A3EB1;
+  --primary-ink: #FFFFFF;
+  --accent: #FFC93F;
+  --accent-2: #FF6F5E;
+  --radius: 18px;
+}
+html[data-theme="techbase-code-coach"] {
+  --font-head: 'Fredoka', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+[data-theme="lesson-note-generator"] {
+  --bg: #FAF9F2;
+  --surface: #FFFFFF;
+  --surface-2: #E9F1EC;
+  --ink: #17281F;
+  --ink-soft: #48594F;
+  --line: #DCE7DF;
+  --primary: #1F4A3D;
+  --primary-ink: #FFFFFF;
+  --accent: #E0A233;
+  --accent-2: #8A4B2E;
+  --radius: 12px;
+}
+html[data-theme="lesson-note-generator"] {
+  --font-head: 'Poppins', system-ui, -apple-system, 'Segoe UI', sans-serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
+
+[data-theme="exam-revision-generator"] {
+  --bg: #FAF6EF;
+  --surface: #FFFFFF;
+  --surface-2: #F2E8D8;
+  --ink: #2A1E1B;
+  --ink-soft: #5C4B45;
+  --line: #E6D9C2;
+  --primary: #7A2331;
+  --primary-ink: #FFFFFF;
+  --accent: #C9A24B;
+  --accent-2: #3F6B5C;
+  --radius: 10px;
+}
+html[data-theme="exam-revision-generator"] {
+  --font-head: 'Libre Baskerville', Georgia, 'Times New Roman', serif;
+  --font-body: 'Inter', system-ui, -apple-system, 'Segoe UI', sans-serif;
+}
