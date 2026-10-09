@@ -25,7 +25,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Get the files
-        uses: actions/checkout@v4
+        uses: actions/checkout@v7
 
       - name: Set up Node
         uses: actions/setup-node@v4
@@ -54,7 +54,7 @@ jobs:
     # A report, not a gate: a low score never blocks a deployment.
     continue-on-error: true
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v7
       - uses: actions/setup-node@v4
         with:
           node-version: 22
