@@ -1,0 +1,181 @@
+{
+  "_readme": "Single source of truth for the All Projects sections on babatundeawo.github.io and the babatundeawo profile README. Master repos and redirect stubs are excluded on purpose: stubs would duplicate their canonical techbaseng entries. Fill every description during that repo's rebuild session; leave null until then. No em or en dashes in any text.",
+  "updated": "2026-07-12",
+  "owners": {
+    "personal": { "label": "Personal", "profile": "https://github.com/babatundeawo" },
+    "techbase": { "label": "Techbase", "profile": "https://github.com/techbaseng" }
+  },
+  "projects": [
+    {
+      "slug": "deep-calls",
+      "owner": "personal",
+      "type": "tool-app",
+      "title": "Deep Calls",
+      "description": null,
+      "tags": [],
+      "live": "https://babatundeawo.github.io/deep-calls/",
+      "repo": "https://github.com/babatundeawo/deep-calls",
+      "featured": false,
+      "status": "not-started"
+    },
+    {
+      "slug": "smart-form-validator",
+      "owner": "personal",
+      "type": "tool-app",
+      "title": "Smart Form Validator",
+      "description": null,
+      "tags": ["javascript"],
+      "live": "https://babatundeawo.github.io/smart-form-validator/",
+      "repo": "https://github.com/babatundeawo/smart-form-validator",
+      "featured": false,
+      "status": "not-started"
+    },
+    {
+      "slug": "student-report-card",
+      "owner": "personal",
+      "type": "tool-app",
+      "title": "Student Report Card",
+      "description": null,
+      "tags": ["education"],
+      "live": "https://babatundeawo.github.io/student-report-card/",
+      "repo": "https://github.com/babatundeawo/student-report-card",
+      "featured": false,
+      "status": "not-started"
+    },
+    {
+      "slug": "techbase-html",
+      "owner": "techbase",
+      "type": "course-site",
+      "title": "Techbase HTML",
+      "description": null,
+      "tags": ["stem-academy", "html"],
+      "live": "https://techbaseng.github.io/techbase-html/",
+      "repo": "https://github.com/techbaseng/techbase-html",
+      "featured": false,
+      "status": "rebuilt"
+    },
+    {
+      "slug": "techbase-css",
+      "owner": "techbase",
+      "type": "course-site",
+      "title": "Techbase CSS",
+      "description": null,
+      "tags": ["stem-academy", "css"],
+      "live": "https://techbaseng.github.io/techbase-css/",
+      "repo": "https://github.com/techbaseng/techbase-css",
+      "featured": false,
+      "status": "rebuilt"
+    },
+    {
+      "slug": "techbase-python",
+      "owner": "techbase",
+      "type": "course-site",
+      "title": "Techbase Python",
+      "description": null,
+      "tags": ["stem-academy", "python"],
+      "live": "https://techbaseng.github.io/techbase-python/",
+      "repo": "https://github.com/techbaseng/techbase-python",
+      "featured": false,
+      "status": "rebuilt"
+    },
+    {
+      "slug": "techbase-scratch",
+      "owner": "techbase",
+      "type": "course-site",
+      "title": "Techbase Scratch",
+      "description": null,
+      "tags": ["stem-academy", "scratch"],
+      "live": "https://techbaseng.github.io/techbase-scratch/",
+      "repo": "https://github.com/techbaseng/techbase-scratch",
+      "featured": false,
+      "status": "rebuilt"
+    },
+    {
+      "slug": "techbase-robotics",
+      "owner": "techbase",
+      "type": "course-site",
+      "title": "Techbase Robotics",
+      "description": null,
+      "tags": ["stem-academy", "robotics"],
+      "live": "https://techbaseng.github.io/techbase-robotics/",
+      "repo": "https://github.com/techbaseng/techbase-robotics",
+      "featured": false,
+      "status": "rebuilt"
+    },
+    {
+      "slug": "techbase-js",
+      "owner": "techbase",
+      "type": "course-site",
+      "title": "Techbase JavaScript",
+      "description": null,
+      "tags": ["stem-academy", "javascript"],
+      "live": "https://techbaseng.github.io/techbase-js/",
+      "repo": "https://github.com/techbaseng/techbase-js",
+      "featured": false,
+      "status": "rebuilt"
+    },
+    {
+      "slug": "globalwarming",
+      "owner": "techbase",
+      "type": "guide",
+      "title": "Global Warming",
+      "description": null,
+      "tags": ["education", "climate"],
+      "live": "https://techbaseng.github.io/globalwarming/",
+      "repo": "https://github.com/techbaseng/globalwarming",
+      "featured": false,
+      "status": "not-started"
+    },
+    {
+      "slug": "educator-ai-toolkit",
+      "owner": "techbase",
+      "type": "guide",
+      "title": "Educator AI Toolkit",
+      "description": null,
+      "tags": ["education", "ai"],
+      "live": "https://techbaseng.github.io/educator-ai-toolkit/",
+      "repo": "https://github.com/techbaseng/educator-ai-toolkit",
+      "featured": false,
+      "status": "not-started"
+    },
+    {
+      "slug": "ai-prompt-library",
+      "owner": "techbase",
+      "type": "guide",
+      "title": "AI Prompt Library",
+      "description": null,
+      "tags": ["ai", "prompts"],
+      "live": "https://techbaseng.github.io/ai-prompt-library/",
+      "repo": "https://github.com/techbaseng/ai-prompt-library",
+      "featured": false,
+      "status": "rebuilt",
+      "also_known_at": "https://babatundeawo.github.io/ai-prompt-library/ (redirect stub)"
+    },
+    {
+      "slug": "ai-studio-android-guide",
+      "owner": "techbase",
+      "type": "guide",
+      "title": "AI Studio Android Guide",
+      "description": null,
+      "tags": ["ai", "android"],
+      "live": "https://techbaseng.github.io/ai-studio-android-guide/",
+      "repo": "https://github.com/techbaseng/ai-studio-android-guide",
+      "featured": false,
+      "status": "not-started",
+      "also_known_at": "https://babatundeawo.github.io/ai-studio-android-guide/ (redirect stub)"
+    },
+    {
+      "slug": "career-engine-guide",
+      "owner": "techbase",
+      "type": "guide",
+      "title": "Career Engine Guide",
+      "description": null,
+      "tags": ["career", "ai"],
+      "live": "https://techbaseng.github.io/career-engine-guide/",
+      "repo": "https://github.com/techbaseng/career-engine-guide",
+      "featured": false,
+      "status": "rebuilt",
+      "also_known_at": "https://babatundeawo.github.io/career-engine-guide/ (redirect stub)"
+    }
+  ]
+}
