@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://babatundeawo.github.io/deploybase/sitemap.xml
