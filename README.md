@@ -13,7 +13,7 @@
 
 </div>
 
-![The Deploybase registry showing eight deployment cards, each with a role, summary and technology tags](docs/assets/preview-hub.png)
+![The Deploybase registry with a live ledger of eight deployments beside the headline](docs/assets/preview-hub.png)
 
 ## About
 
@@ -24,8 +24,11 @@ Deploybase lists every Claude Project (a custom AI system) built and run by Baba
 - A registry of eight deployments: seven case-study pages and one live tool, the Educator AI Toolkit.
 - A page for each project covering its purpose, how a session runs and the rules it never breaks.
 - The exact custom instructions and knowledge files for each project, shown on the page with a one-tap copy button and a link to the raw file.
+- Light and dark themes that follow the device setting, with a toggle that remembers your choice.
+- Installs on Android, iPhone and desktop like an app, and opens offline. Pages you have visited stay available without a connection.
 - Works on any screen from a small phone to a wide monitor, with full keyboard navigation and reduced-motion support.
-- Readable without JavaScript. The file viewer and copy buttons need it, and each file also has a direct link.
+- Readable without JavaScript. The file viewer, copy buttons and install prompt need it, and each file also has a direct link.
+- No tracking, no third-party requests. Fonts and icons are served from the site itself.
 
 ![A Deploybase project page showing the overview, key figures and feature cards](docs/assets/preview-project.png)
 
@@ -39,9 +42,9 @@ Deploybase lists every Claude Project (a custom AI system) built and run by Baba
 ## Tech stack
 
 - HTML, CSS and vanilla JavaScript, with no framework and no runtime dependencies
-- A small Node script that builds the registry, sitemap and link checks
+- A small Node script that builds the registry, theme styles, service worker and sitemap, and checks every link
 - GitHub Actions and GitHub Pages for building and hosting
-- Google Fonts, loaded per project
+- Self-hosted variable fonts and a hand-written service worker for offline use
 
 ## Project structure
 
@@ -50,20 +53,26 @@ index.html              The registry (hub) page
 <project-slug>/         One folder per deployment
   index.html            The project page
   files/                The original instruction and knowledge files, unmodified
-assets/                 Shared stylesheet, theme colours, script and images
+assets/                 Shared styles, scripts, fonts and images
 data/projects.json      The registry data that drives the hub cards
+data/themes.json        Colours and fonts for the hub and every project
 scripts/build.mjs       Builds the site and checks every link
+scripts/templates/      Service worker, 404 and offline page templates
 docs/                   Guides for running and customising the site
-.github/                Workflows for deployment and security scanning
+.github/                Workflows for deployment, pull request checks and security scanning
 ```
 
 ## Contributing
 
-Found a typo, a broken link or something that does not work on your device? Open an [issue](https://github.com/babatundeawo/deploybase/issues/new) on GitHub and describe what you saw, the page it happened on and the device or browser you used.
+Found a typo, a broken link or something that does not work on your device? Open an [issue](https://github.com/babatundeawo/deploybase/issues/new) and describe what you saw, the page it happened on and the device or browser you used. Developers can read [CONTRIBUTING.md](CONTRIBUTING.md) to run the site locally.
+
+## Security
+
+To report a vulnerability, see [SECURITY.md](SECURITY.md).
 
 ## Credits
 
-Typefaces are served by Google Fonts under the SIL Open Font License: Sora, Inter, JetBrains Mono, Nunito, Plus Jakarta Sans, Space Grotesk, Manrope, Fraunces, Source Serif 4, Fredoka, Poppins and Libre Baskerville. The AI systems described here run on Claude by Anthropic.
+Typefaces are self-hosted from [Fontsource](https://fontsource.org) under the SIL Open Font License 1.1: Sora, Inter, JetBrains Mono, Nunito, Plus Jakarta Sans, Space Grotesk, Manrope, Fraunces, Source Serif 4, Fredoka, Poppins and Libre Baskerville. The AI systems described here run on Claude by Anthropic.
 
 ## Contact
 

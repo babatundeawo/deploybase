@@ -1,119 +1,140 @@
 # Deployment guide
 
-This guide is for the site owner. You do not need a terminal, and you do not need to install anything. Everything is done in your web browser on github.com.
+This guide is for the site owner. You never need a terminal. Everything is a click in GitHub Desktop, File Explorer or the GitHub website.
 
 ## How deployment works, in plain words
 
-GitHub stores your files. Each time you save a change to the **main** branch, a robot called **GitHub Actions** wakes up, builds the site, checks that no link is broken, and publishes it at https://babatundeawo.github.io/deploybase/. This takes about one to two minutes. You never press a "publish" button yourself.
+GitHub stores your files. Each time a change reaches the **main** branch, a robot called **GitHub Actions** wakes up, builds the site, checks that no link is broken, and publishes it at https://babatundeawo.github.io/deploybase/. This takes one to two minutes. You never press a "publish" button yourself.
 
-## One-time setup: replacing the old repository
+GitHub Pages on the free plan needs a **public** repository. This one is public. If you ever make it private, the live site stops updating.
 
-Do these steps in order. The old site stays safe, under a new name, until you are happy with the new one.
+## Putting this redesign live (one time)
 
-### Step 1: Rename the old repository (do not delete it yet)
+The redesign arrives as a **pull request** (a proposed change that waits for you to approve it). The live site does not change until you merge it.
 
-1. Go to https://github.com/babatundeawo/deploybase
-2. Click **Settings** (the tab on the right end of the row that starts with **Code**).
-3. In the first box, **Repository name**, delete `deploybase` and type `deploybase-old`.
-4. Click **Rename**.
+1. Open https://github.com/babatundeawo/deploybase/pulls and click the pull request named **Premium redesign**.
+2. Scroll to the bottom. You should see green ticks next to **Build and check**. A red cross means something failed: see "How to read an error" below.
+3. **To look at it before you merge:** click the **Checks** tab, click **Check pull request** on the left, scroll to **Artifacts**, and click **built-site**. A ZIP downloads. Extract it, open the folder, and double-click `index.html`. Fonts, colours and pages show. The install and offline features only work on the real live address, so they cannot be tested from this copy.
+4. When you are happy, click the green **Merge pull request** button, then **Confirm merge**.
+5. Click the **Actions** tab. A new row called **Deploy site** appears. Wait for the green tick (about two minutes).
+6. Open https://babatundeawo.github.io/deploybase/ and press **Ctrl + F5** once to skip the old saved copy.
 
-You should see the page reload with the new name at the top. The old live site now sits at `babatundeawo.github.io/deploybase-old/`, and the address `babatundeawo.github.io/deploybase/` shows "404" until Step 5 is finished. This gap normally lasts a few minutes.
+GitHub Pages has no built-in preview for a pull request. Your two options are the one above (download and look) or merge and rely on the easy rollback below.
 
-### Step 2: Create the new repository
-
-1. Click the **+** at the top right of GitHub, then **New repository**.
-2. **Repository name:** type exactly `deploybase` (all lowercase, no spaces).
-3. Choose **Public**.
-4. Leave every box under it unticked (no README, no .gitignore, no license).
-5. Click **Create repository**.
-
-You should see a page titled "Quick setup".
-
-### Step 3: Upload the files
-
-1. On your computer, unzip the file you downloaded from Claude. Open the unzipped folder so that you can see `index.html`, `assets`, `docs` and the project folders.
-2. On the new repository page, click **uploading an existing file** (a blue link in the Quick setup box).
-3. Select everything inside the folder (not the folder itself) and drag it into the browser window. Include the folder named `.github`. On a Mac, press `Command + Shift + .` in the Finder window to show hidden folders so you can select it.
-4. Wait until every file shows a green tick (there are 80 files).
-5. Scroll down. Leave **Commit directly to the main branch** selected, and click **Commit changes**.
-
-You should see the list of files on the repository page, including `index.html`.
-
-### Step 4: Check the workflow files arrived
-
-1. Click the folder `.github`, then `workflows`.
-2. You should see two files: `deploy.yml` and `codeql.yml`. Also check that `.github` contains `dependabot.yml`.
-
-If `.github` is missing, your computer skipped the hidden folder. Create each file by hand instead:
-
-1. On the repository's main page click **Add file**, then **Create new file**.
-2. In the name box type `.github/workflows/deploy.yml` (typing each `/` creates a folder).
-3. Open `docs/setup-files/deploy.yml.txt` in this repository, copy everything, and paste it into the big editor box.
-4. Click **Commit changes**, then **Commit changes** again.
-5. Repeat for `.github/workflows/codeql.yml` (copy from `docs/setup-files/codeql.yml.txt`) and `.github/dependabot.yml` (copy from `docs/setup-files/dependabot.yml.txt`).
-
-### Step 5: Switch on GitHub Pages
+## One-time check: Pages must use GitHub Actions
 
 1. Click **Settings**, then **Pages** in the left menu.
-2. Under **Build and deployment**, find **Source** and choose **GitHub Actions**.
-3. Click the **Actions** tab at the top, click **Deploy site** in the left list, click **Run workflow** (grey button on the right), then the green **Run workflow** button.
+2. Under **Build and deployment**, **Source** must say **GitHub Actions**. If it says **Deploy from a branch**, change it.
 
-Wait two minutes and refresh. You should see a green tick next to the run, and https://babatundeawo.github.io/deploybase/ should show the new site.
+## Switch on the free security scanners (one time)
 
-### Step 6: Switch on the free security scanners
+1. Click **Settings**, then **Code security** (on some accounts **Advanced security**).
+2. Switch on **Dependabot alerts**, **Secret scanning** and **Push protection**.
 
-1. Click **Settings**, then **Code security** in the left menu (on some accounts it is called **Advanced security**).
-2. Switch on **Dependabot alerts**.
-3. Switch on **Secret scanning** (and **Push protection** if you see it).
-
-### Step 7: Delete the old repository (only when you are happy)
-
-Open `https://github.com/babatundeawo/deploybase-old`, click **Settings**, scroll to the bottom, click **Delete this repository** and follow the prompts. Deleting erases its history and cannot be undone, so wait until you have checked the new site on your phone and computer.
+You should see each one show as **Enabled**.
 
 ## Updating content day to day
 
-1. Open the file on GitHub (for example `classpulse-national/index.html`).
-2. Click the pencil icon (**Edit this file**) at the top right of the file.
-3. Make your change.
-4. Click **Commit changes**, then **Commit changes** again.
+### With GitHub Desktop
 
-The site updates in one to two minutes.
+1. Open GitHub Desktop and choose the **deploybase** repository. Click **Fetch origin**, then **Pull origin** if it appears.
+2. Open the repository folder in File Explorer (**Repository > Show in Explorer**) and change the file, or replace images and files.
+3. Go back to GitHub Desktop. You should see your changed files listed on the left.
+4. In the **Summary** box type what you changed, for example `Update the Social Content Engine summary`.
+5. Click **Commit to main**, then **Push origin**.
 
-### The safer way: preview before publishing
+If you cannot see the `.github` folder in File Explorer: click **View**, then **Show**, then tick **Hidden items**.
 
-If you want a second pair of eyes or a check before anything goes live, choose **Create a new branch for this commit and start a pull request** instead, then click **Propose changes** and **Create pull request**. GitHub runs the same build and link checks on the pull request, and shows a green tick or red cross. The live site does not change until you click **Merge pull request**. To throw the change away, click **Close pull request**. GitHub Pages cannot show a visual preview of an unmerged change, so the checks are your safety net.
+### On the GitHub website
+
+1. Open the file on GitHub, click the pencil icon, make the change.
+2. Click **Commit changes**, then **Commit changes** again.
+
+### The safer way
+
+In GitHub Desktop click **Current Branch**, then **New Branch**, name it (for example `update-summary`), make your change, commit, click **Publish branch**, then **Create Pull Request**. GitHub runs the checks and gives you a downloadable copy. Nothing goes live until you merge.
 
 ## How to check that a deployment worked
 
 1. Click the **Actions** tab.
-2. Look at the top row of the list.
+2. Look at the top row.
    - A **green tick** means the site is live.
-   - A **yellow circle** means it is still working. Wait a minute.
+   - A **yellow circle** means it is working. Wait a minute.
    - A **red cross** means something failed, and the live site stays on the last good version.
+3. To find the address, click the row, then click **Publish**. The address is shown under it.
 
 ## How to read an error
 
 1. Click the row with the red cross.
 2. Click the red job name on the left (for example **Build and check**).
-3. Click the step with the red cross. The message is written in plain words. Common ones:
+3. Click the step with the red cross. The message is in plain words:
 
 | Message | What it means | Fix |
 | --- | --- | --- |
-| `points to a file that does not exist` | A link, image or file name is spelled wrongly or the file was not uploaded | Fix the spelling in the file named at the start of the message, or upload the missing file |
+| `points to a file that does not exist` | A link, image or file name is misspelled, or the file was not uploaded | Fix the spelling in the file named at the start of the message, or add the missing file |
 | `points to a section (#...) that does not exist` | A link to a part of a page uses a name that is not on that page | Check the `id` or the link name |
 | `is missing "..."` or `is used twice` | An entry in `data/projects.json` is incomplete or repeated | Fix that entry |
-| `Get Pages site failed` or `HttpError: Not Found` | GitHub Pages is not switched on | Do Step 5 above |
+| `there is no theme called "..."` | A project uses a theme that is not in `data/themes.json` | Add the theme, or fix the name |
+| `manifest.webmanifest: ... does not exist` | An icon or screenshot named in the manifest is missing | Add the file or remove the entry |
+| `Get Pages site failed` or `HttpError: Not Found` | GitHub Pages is not switched on | Do the Pages check above |
 
-The Lighthouse report is a score card and never blocks a deployment. It appears in the run summary under **Artifacts**.
+Warnings (yellow) do not stop a deployment. The Lighthouse report and the HTML check are score cards, never gates.
 
-## How to go back to an earlier version
+## How to roll back
 
-1. Click the **Actions** tab.
-2. Scroll to the last run that has a green tick from before the change you want to undo, and click it.
-3. Click **Re-run all jobs** (top right), then confirm.
+If something is wrong after a merge, undo it:
 
-This publishes that earlier version again. To fix the files themselves, open the file, click **History**, click the earlier version, and use the three dots menu to view it, then copy the old text back into the file with the pencil icon.
+1. Click **Pull requests**, then **Closed**, and open the pull request you merged.
+2. Near the bottom of the page click **Revert**. GitHub prepares a new pull request that undoes the change.
+3. Click **Create pull request**, wait for the green ticks, then click **Merge pull request** and **Confirm merge**.
+4. Wait for **Deploy site** to show a green tick on the **Actions** tab.
+
+For a change that was committed directly (not through a pull request): click **Commits**, click the commit, click the three dots at the top right, choose **Revert**, and follow the same steps.
+
+## Install it on a phone and test offline
+
+1. **Android (Chrome):** open the live address. After you have looked around (it may take a second visit), a card offers **Install Deploybase**. You can also open the Chrome menu and tap **Install app**. You should see a Deploybase icon on your home screen.
+2. **iPhone (Safari):** open the live address, tap the **Share** button at the bottom, scroll down, tap **Add to Home Screen**, then **Add**. The site shows a short guide for this on your second visit. It only works in Safari.
+3. **Offline test:** open the app and a project page while online. Turn on airplane mode and open the app again. The registry and the pages you opened still load, and a banner says you are offline. A page you never opened shows the branded offline page.
+4. **Updates:** after a new deployment, open the app. A card says **Update available**. Tap **Refresh**. You are never forced onto old or new content in the middle of reading.
+
+## Verification checklist
+
+After a deployment, check these on the live address:
+
+- The home page loads and shows eight deployments.
+- The moon or sun button switches light and dark, and the choice is kept after a refresh.
+- A project page opens, a file box opens, and **Copy text** shows "Copied to clipboard".
+- A page that does not exist (add `/nothing` to the address) shows the branded 404 page.
+- On a phone there is no sideways scrolling.
+- The app installs and opens offline (above).
+
+## Troubleshooting
+
+| Symptom | Cause | Fix |
+| --- | --- | --- |
+| Blank page or no styling | Files were moved so the addresses no longer match, or Pages serves the wrong folder | Check **Settings > Pages > Source** says **GitHub Actions**, then run **Deploy site** again |
+| Old design still showing | Your browser or the installed app kept the previous version | Press **Ctrl + F5**, or open the app and tap **Refresh** on the update card |
+| `404` when you refresh a project page | The address is missing its trailing `/` or the folder name is wrong | Use the address with the folder name and a trailing `/`, for example `.../classpulse-national/` |
+| The `.github` folder is missing after copying files | Windows hides folders that start with a dot | In File Explorer click **View > Show > Hidden items** |
+| Actions shows a red cross about links | A file name or link has a typo | Read the message (see above) |
+| Pages is not enabled | **Source** is not set to GitHub Actions | Settings > Pages > Source > GitHub Actions |
+| Install button never appears | The browser has not offered it yet, or the app is already installed | Visit twice, or use the browser menu: **Install app** (Chrome) or **Add to Home Screen** (Safari) |
+| Offline page shows for a page you opened | That page was opened before the service worker was active | Open it once while online, then it is saved |
+| The update card never appears | The browser checks for a new version when you return to the tab | Close the app, reopen it, wait a few seconds |
+| Colours changed but look wrong | A colour in `data/themes.json` has low contrast | Read the yellow warning in the build and adjust the colour |
 
 ## Custom domain (optional, not set up)
 
-The site is built for `https://babatundeawo.github.io/deploybase/`. To use your own domain, go to **Settings > Pages > Custom domain**, type the domain and save, then add the records GitHub shows you at your domain provider's DNS page. The web addresses written inside the pages (for example `canonical` and social preview addresses) would then also need to change to the new domain.
+The site is built for `https://babatundeawo.github.io/deploybase/`. To use your own domain:
+
+1. **Settings > Pages > Custom domain**: type the domain and save.
+2. At your domain provider add the DNS records GitHub shows you, then tick **Enforce HTTPS** once it appears.
+3. In `data/projects.json` change `site.url` to the new address. If the new address has no folder name, the base path becomes `/` automatically.
+4. In every page, replace `https://babatundeawo.github.io/deploybase/` with the new address (GitHub Desktop and most editors have **Find and replace in all files**). These are the canonical and social preview addresses.
+
+## What GitHub Pages cannot do
+
+- It cannot send real "301" redirects. Pages that moved use a soft redirect (a refresh tag, a canonical link, a visible link and a small script). Search engines treat these slightly more slowly than a true redirect.
+- It cannot set security headers. The Content Security Policy is set with a `<meta>` tag, so a few headers cannot be set. See `SECURITY.md`.
+- It sets its own caching times for files, so changes can take a few minutes to reach every visitor.

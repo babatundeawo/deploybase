@@ -1,28 +1,83 @@
 {
+  "id": "./",
   "name": "Deploybase - AI Deployment Directory",
   "short_name": "Deploybase",
-  "description": "A directory of configured, deployed AI systems: programming tutors, content engines, writing assistants and live tools built by Babatunde Awoyemi / Techbase Consultant Services.",
+  "description": "A directory of configured, deployed AI systems, each with the exact instructions behind it.",
+  "lang": "en",
+  "dir": "ltr",
   "start_url": "./",
   "scope": "./",
-  "display": "browser",
+  "display": "standalone",
+  "orientation": "any",
   "background_color": "#f6f7fb",
   "theme_color": "#3355ff",
+  "categories": [
+    "education",
+    "productivity",
+    "developer"
+  ],
   "icons": [
     {
       "src": "assets/img/icon-192.png",
       "sizes": "192x192",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "assets/img/icon-512.png",
       "sizes": "512x512",
-      "type": "image/png"
+      "type": "image/png",
+      "purpose": "any"
     },
     {
       "src": "assets/img/icon-maskable-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
+    }
+  ],
+  "shortcuts": [
+    {
+      "name": "Browse the registry",
+      "short_name": "Registry",
+      "description": "See every deployment",
+      "url": "./#registry",
+      "icons": [
+        {
+          "src": "assets/img/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    },
+    {
+      "name": "How to rebuild one",
+      "short_name": "How it works",
+      "description": "The three steps",
+      "url": "./#how-it-works",
+      "icons": [
+        {
+          "src": "assets/img/icon-192.png",
+          "sizes": "192x192",
+          "type": "image/png"
+        }
+      ]
+    }
+  ],
+  "screenshots": [
+    {
+      "src": "assets/img/screenshot-wide.png",
+      "sizes": "1280x720",
+      "type": "image/png",
+      "form_factor": "wide",
+      "label": "The Deploybase registry listing every deployment"
+    },
+    {
+      "src": "assets/img/screenshot-narrow.png",
+      "sizes": "540x960",
+      "type": "image/png",
+      "form_factor": "narrow",
+      "label": "The registry on a phone"
     }
   ]
 }

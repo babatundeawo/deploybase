@@ -1,4 +1,4 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en" data-theme="classpulse-national">
 <head>
 <meta charset="utf-8">
@@ -6,8 +6,9 @@
 <title>ClassPulse National - Claude Project · Deploybase</title>
 <meta name="description" content="The Claude Project instructions behind an AI programming tutor teaching a student to build a national classroom feedback platform for Nigerian schools.">
 <link rel="canonical" href="https://babatundeawo.github.io/deploybase/classpulse-national/">
-<meta name="theme-color" content="#1B2A4A">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' https://fonts.googleapis.com; font-src https://fonts.gstatic.com; img-src 'self' data:; connect-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'">
+<meta name="theme-color" content="#F7FAF7" media="(prefers-color-scheme: light)" data-scheme="light" data-media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#0a0f19" media="(prefers-color-scheme: dark)" data-scheme="dark" data-media="(prefers-color-scheme: dark)">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self'; font-src 'self'; img-src 'self' data:; connect-src 'self'; manifest-src 'self'; worker-src 'self'; base-uri 'self'; form-action 'none'; object-src 'none'">
 <meta name="referrer" content="strict-origin-when-cross-origin">
 <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Crect width='24' height='24' rx='6' fill='%231B2A4A'/%3E%3Crect x='9' y='9' width='6' height='6' rx='1.5' fill='%232E9E5B'/%3E%3C/svg%3E">
 <link rel="manifest" href="../manifest.webmanifest">
@@ -24,9 +25,10 @@
 <meta name="twitter:title" content="ClassPulse National - Claude Project · Deploybase">
 <meta name="twitter:description" content="The Claude Project instructions behind an AI programming tutor teaching a student to build a national classroom feedback platform for Nigerian schools.">
 <meta name="twitter:image" content="https://babatundeawo.github.io/deploybase/assets/img/og/classpulse-national.png">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800&family=Inter:wght@400;500;600&display=swap">
+<script src="../assets/js/theme-init.js"></script>
+<link rel="preload" href="../assets/fonts/nunito.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/inter.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../assets/css/fonts.css">
 <link rel="stylesheet" href="../assets/css/site.css">
 <link rel="stylesheet" href="../assets/css/themes.css">
 <script src="../assets/js/site.js" defer></script>
@@ -43,7 +45,7 @@
     <a href="#how-it-works">How it works</a>
     <a href="#get-project">Get this project</a>
     </nav>
-    <button class="hamburger" type="button" data-hamburger aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span class="bars"></span></button>
+    <div class="nav-tools"><button class="theme-toggle" type="button" data-theme-toggle aria-label="Switch theme"><svg class="i-moon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z"/></svg><svg class="i-sun" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="4"/><path d="M12 2v2M12 20v2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M2 12h2M20 12h2M4.9 19.1l1.4-1.4M17.7 6.3l1.4-1.4"/></svg></button><button class="hamburger" type="button" data-hamburger aria-label="Open menu" aria-expanded="false" aria-controls="site-nav"><span class="bars"></span></button></div>
   </div>
   <noscript><div class="container nav-noscript"><a href="../">&larr; Deploybase</a> <a href="#overview">Overview</a> <a href="#how-it-works">How it works</a> <a href="#get-project">Get this project</a></div></noscript>
 </header>
@@ -99,7 +101,7 @@
       <h2>Mr. Babatunde and Ivan drive the whole build with one command</h2>
       <p>There is no status file to keep updated between sessions. Progress is tracked purely by the class number typed next, and Claude always teaches one step at a time, waiting for confirmation before moving on.</p>
     </div>
-    <div class="table-wrap">
+    <div class="table-wrap" tabindex="0" role="region" aria-label="Scrollable table">
       <table>
         <thead><tr><th>They type</th><th>Claude does</th></tr></thead>
         <tbody>
@@ -121,19 +123,19 @@
     <div class="list">
       <div class="list-item">
   <div class="n">01</div>
-  <div><h4>One step at a time</h4><p>Explain in plain English before every code block, and wait for confirmation before moving on.</p></div>
+  <div><h3>One step at a time</h3><p>Explain in plain English before every code block, and wait for confirmation before moving on.</p></div>
 </div><div class="list-item">
   <div class="n">02</div>
-  <div><h4>Child friendly design in every step</h4><p>Large buttons of at least 56px, friendly language, colour paired with text, the Nunito font, navy plus bright accents, and no layout overflow at any width down to 375px.</p></div>
+  <div><h3>Child friendly design in every step</h3><p>Large buttons of at least 56px, friendly language, colour paired with text, the Nunito font, navy plus bright accents, and no layout overflow at any width down to 375px.</p></div>
 </div><div class="list-item">
   <div class="n">03</div>
-  <div><h4>Never rewrite whole files</h4><p>Show only the new code for the current step, with the exact file and location named.</p></div>
+  <div><h3>Never rewrite whole files</h3><p>Show only the new code for the current step, with the exact file and location named.</p></div>
 </div><div class="list-item">
   <div class="n">04</div>
-  <div><h4>Teacher queries only ever aggregate</h4><p>Flag this explicitly whenever a query is written that a teacher will run, since it must never expose an individual student&rsquo;s vote.</p></div>
+  <div><h3>Teacher queries only ever aggregate</h3><p>Flag this explicitly whenever a query is written that a teacher will run, since it must never expose an individual student&rsquo;s vote.</p></div>
 </div><div class="list-item">
   <div class="n">05</div>
-  <div><h4>Keep code types conceptually distinct</h4><p>Entry codes are shared gate passes in a word plus two digit format. Personal codes are private, unique, and only issued after approval, in a two word plus four digit format.</p></div>
+  <div><h3>Keep code types conceptually distinct</h3><p>Entry codes are shared gate passes in a word plus two digit format. Personal codes are private, unique, and only issued after approval, in a two word plus four digit format.</p></div>
 </div>
     </div>
   </div>
@@ -149,13 +151,13 @@
     <div class="grid">
       <details class="filebox-wrap">
   <summary>
-    <div class="summary-row">
-      <div class="s-left">
-        <div class="s-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H8l-4 4V4z"/></svg></div>
-        <div><h4>Custom instructions</h4><div class="s-sub">Goes in the Claude Project's instructions field</div></div>
-      </div>
+    <span class="summary-row">
+      <span class="s-left">
+        <span class="s-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16v12H8l-4 4V4z"/></svg></span>
+        <span class="s-text"><span class="s-title">Custom instructions</span><span class="s-sub">Goes in the Claude Project's instructions field</span></span>
+      </span>
       <svg aria-hidden="true" focusable="false" class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
-    </div>
+    </span>
   </summary>
   <div class="filebox-body">
     <div class="filebox" data-src="files/classpulse_project_instructions_field.md">
@@ -166,18 +168,18 @@
           <button class="btn btn-primary btn-sm" data-copy type="button">Copy text</button>
         </div>
       </div>
-      <pre><code></code></pre>
+      <pre tabindex="0" aria-label="File contents, scrollable"><code></code></pre>
     </div>
   </div>
 </details><details class="filebox-wrap">
   <summary>
-    <div class="summary-row">
-      <div class="s-left">
-        <div class="s-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16"/></svg></div>
-        <div><h4>Full guidelines (knowledge file)</h4><div class="s-sub">Upload as a project knowledge file: ClassPulse_National_Guidelines.md</div></div>
-      </div>
+    <span class="summary-row">
+      <span class="s-left">
+        <span class="s-icon"><svg aria-hidden="true" focusable="false" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5.5A2.5 2.5 0 0 1 6.5 3H20v16H6.5A2.5 2.5 0 0 0 4 21.5z"/><path d="M4 5.5v16"/></svg></span>
+        <span class="s-text"><span class="s-title">Full guidelines (knowledge file)</span><span class="s-sub">Upload as a project knowledge file: ClassPulse_National_Guidelines.md</span></span>
+      </span>
       <svg aria-hidden="true" focusable="false" class="chev" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 6l6 6-6 6"/></svg>
-    </div>
+    </span>
   </summary>
   <div class="filebox-body">
     <div class="filebox" data-src="files/ClassPulse_National_Guidelines.md">
@@ -188,7 +190,7 @@
           <button class="btn btn-primary btn-sm" data-copy type="button">Copy text</button>
         </div>
       </div>
-      <pre><code></code></pre>
+      <pre tabindex="0" aria-label="File contents, scrollable"><code></code></pre>
     </div>
   </div>
 </details>
@@ -204,6 +206,7 @@
       <a href="https://github.com/techbaseng" target="_blank" rel="noopener noreferrer">Techbase</a>
     </div>
     <p class="fine">Built by Babatunde Awoyemi. Powered by Claude (Anthropic).</p>
+    <div class="footer-tools"><button class="btn btn-ghost btn-sm install-link" type="button" data-install hidden>Install app</button><button class="btn btn-ghost btn-sm" type="button" data-share hidden>Share this page</button></div>
     <p class="fine">© <span data-year>2026</span> ClassPulse National. A Claude Project write-up published for reference.</p>
   </div>
 </footer>
